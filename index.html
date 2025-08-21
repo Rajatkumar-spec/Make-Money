@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Make Money 💲</title>
+  <script type="module" src="firebase.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f172a; color:white; text-align:center; }
+    .card { max-width:400px; margin:50px auto; padding:20px; background:#1e293b; border-radius:10px; }
+    input { width:90%; padding:10px; margin:5px; border-radius:6px; border:none; }
+    button { padding:10px 20px; margin:10px; border:none; border-radius:6px; background:#22c55e; color:white; font-weight:bold; cursor:pointer; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="registerBox">
+    <h2>Register</h2>
+    <input type="text" id="regName" placeholder="Name"><br>
+    <input type="text" id="regPhone" placeholder="Phone"><br>
+    <input type="email" id="regEmail" placeholder="Email"><br>
+    <input type="password" id="regPass" placeholder="Password"><br>
+    <button onclick="register()">Register</button>
+    <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <div class="card hidden" id="loginBox">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email"><br>
+    <input type="password" id="loginPass" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <p>New user? <a href="#" onclick="showRegister()">Register</a></p>
+  </div>
+
+  <div class="card hidden" id="profileBox">
+    <h2>Profile</h2>
+    <p id="userName"></p>
+    <p id="userPhone"></p>
+    <p id="userEmail"></p>
+    <p>💰 Balance: <span id="userBalance">0</span></p>
+    <button onclick="recharge()">Recharge</button>
+    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="logout()">Logout</button>
+    <p>📧 Support: rajatkumar85108@gmail.com</p>
+  </div>
+
+</body>
+                                                                          </html>
